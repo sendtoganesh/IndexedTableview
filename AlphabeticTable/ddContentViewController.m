@@ -22,12 +22,10 @@
     
     self.tableViewHeader = [[UILabel alloc] initWithFrame:CGRectMake(0, 10, 500, 75)];
     tableViewHeader.backgroundColor = [UIColor purpleColor];
-    tableViewHeader.text = @"BRAND";
     [self.view addSubview:tableViewHeader];
     
     
     self.indexTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, self.tableViewHeader.frame.size.height, 500, 550) style:UITableViewStylePlain];
-    //self.indexTableView.backgroundColor = [UIColor yellowColor];
     self.indexTableView.separatorColor = [UIColor redColor];
     self.indexTableView.delegate = self;
     self.indexTableView.dataSource = self;
@@ -104,11 +102,6 @@
 }
 
 
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//	[tableView deselectRowAtIndexPath:indexPath animated:YES];
-//}
-
-
 #pragma mark -- UITableViewDelegate Delegate Methods
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -121,14 +114,5 @@
 {
     NSLog(@"Selected Section %i %i",indexPath.section,indexPath.row);
 }
-
-
-//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-//{
-//    UILabel *tableViewHeader = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 500, 500)];
-//    tableViewHeader.backgroundColor = [UIColor purpleColor];
-//    tableViewHeader.text = @"NARROW RESULTS";
-//    return tableViewHeader;
-//}
 
 @end

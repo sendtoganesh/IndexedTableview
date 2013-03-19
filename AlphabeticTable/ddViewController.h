@@ -4,7 +4,7 @@
 @interface ddViewController : UIViewController<UIPopoverControllerDelegate>
 
 
-@property(nonatomic,retain) UIButton *narrowResultButton;
-@property(nonatomic,retain) UIPopoverController *narrowResultPopOver;
+@property(nonatomic,retain) UIButton *button;
+@property(nonatomic,retain) UIPopoverController *popOver;
 
 @end
